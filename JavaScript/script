@@ -1,19 +1,17 @@
 let i = 0;
 const values = [];
+
 function getGoldAmount(){
-    values[i] = parseInt(document.getElementById('amount').value);
-    document.getElementById('amount').value = ""
-    i++;
-    console.log(values);
-    getAverage();
-}
-function getAverage() {
     let total = 0;
     let average = 0;
+
+    values[i] = parseInt(document.getElementById('amount').value);
+    i++;
+    document.getElementById('amount').value = ""
+    
     values.forEach(val => {
         total = total + val;
     });
     average = total / i;
-    // window.alert(average);
     document.getElementById('average').innerHTML = average;
 }
