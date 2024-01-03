@@ -5,6 +5,7 @@ function getGoldAmount(){
     document.getElementById('amount').value = ""
     i++;
     console.log(values);
+    getAverage();
 }
 function getAverage() {
     let total = 0;
@@ -13,5 +14,6 @@ function getAverage() {
         total = total + val;
     });
     average = total / i;
-    window.alert(average);
+    // window.alert(average);
+    document.getElementById('average').innerHTML = average;
 }
