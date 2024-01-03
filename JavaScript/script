@@ -2,6 +2,7 @@ let i = 0;
 const values = [];
 function getGoldAmount(){
     values[i] = document.getElementById('amount').value;
+    document.getElementById('amount').value = ""
     i++;
     console.log(values);
 }
