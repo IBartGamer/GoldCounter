@@ -6,12 +6,28 @@ function getGoldAmount(){
     let average = 0;
 
     values[i] = parseInt(document.getElementById('amount').value);
-    i++;
     document.getElementById('amount').value = ""
     
     values.forEach(val => {
         total = total + val;
     });
-    average = total / i;
+    average = total / (i + 1);
     document.getElementById('average').innerHTML = average;
+    
+    addTableCell(values[i]);
+    i++;
 }
+
+
+function addTableCell(value){
+    let tr = document.createElement("tr");
+    tr.setAttribute("id", "tr")
+    document.getElementById('tabela').appendChild(tr);
+
+    let td = document.createElement("td");
+    let tnode = document.createTextNode(value); 
+    
+
+    td.appendChild(tnode);
+    tr.appendChild(td);
+}    
