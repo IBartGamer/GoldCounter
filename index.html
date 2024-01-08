@@ -9,8 +9,12 @@
 <body>
         <label>Wpisz ilość złota: </label> <br>
         <input type="text" id="amount"> <br>
-        <input type="button" onclick="getGoldAmount()" value="Dodaj">
-        <p id="average"></p>
+        <!-- <input type="button" onclick="getGoldAmount()" value="Dodaj"> -->
+        <button onclick="getGoldAmount()"> <img src="Assets/buttonv2.png"> </button>
+        <div class="srednia">
+            <p> Średnia złota wynosi: </p>
+            <p id="average"> 0 </p>
+        </div>
         <p> Historia numerków: </p>
         <table id="tabela" class="center"></table>
 </body>
