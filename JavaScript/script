@@ -4,9 +4,12 @@ const values = [];
 function getGoldAmount(){
     let total = 0;
     let average = 0;
+    let amount = document.getElementById('amount');
 
-    values[i] = parseInt(document.getElementById('amount').value);
-    document.getElementById('amount').value = ""
+    if(isNaN(parseInt(amount.value))) {return false;}
+
+    values[i] = parseInt(amount.value);
+    amount.value = ""
     
     values.forEach(val => {
         total = total + val;
